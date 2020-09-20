@@ -1,0 +1,18 @@
+---
+layout: default
+title: Ideas
+---
+
+<p> Sharing my random thoughts to the public. All statements are solely opinions and no advice whatsoever. Please stay critical and understand that this is a work in progress, I always try to consider all perspectives and might end up horribly wrong. </p>
+  <p> However, I would love to discuss, just drop me a message to any of my social instances.</p>
+
+{% for post in site.posts %}
+<article role="article">
+  <h2><a href="{{ site.baseurl }}{{ post.url }}">
+    {{ post.title }}
+  </a></h2>
+  <p>{{ post.summary }}</p>
+    <time class="date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+</article>
+{% endfor %}
+
